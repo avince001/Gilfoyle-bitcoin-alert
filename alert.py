@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import time
 from pygame import mixer
 
 def playSound():
@@ -32,5 +33,5 @@ while True:
     oldVal = currentVal
     currentVal = roundOff(getBitCoinValue())  
     if currentVal != oldVal:
-        print('Current Value: USD',currentVal,', Previous Value: USD',oldVal)
+        print('Current Value: USD',currentVal,', Previous Value: USD',oldVal, ':  Updated on: ',time.strftime("%d-%m-%Y, %H:%M:%S", time.localtime()))
         playSound()
