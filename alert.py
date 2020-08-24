@@ -16,7 +16,7 @@ def getBitCoinValue():
     data = response.content
     soup = BeautifulSoup(data, 'html.parser')
     input_tag = soup.find_all('span')
-    value = input_tag[35].contents[0]
+    value = input_tag[27].contents[0]
     value = str(value)
     value = value.replace(',','')
     value_f = float(value)
